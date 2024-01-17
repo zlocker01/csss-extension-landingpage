@@ -17,12 +17,12 @@ solid
 $primary-color
 */
 
-@mixin button($background: $primary-color, $color: $secondary-color, $width: 10px, $height: 10px, $borderWidth: 5px, $style: solid, $borderColor: $primary-color) {
+@mixin button($background: $primary-color, $color: $secondary-color, $width: .625rem, $height: .625rem, $borderWidth: .3125rem, $style: solid, $borderColor: $primary-color) {
     background-color: $background;
     color: $color;
     padding: $width $height;
     border: $borderWidth $style $borderColor;
-    border-radius: 10px;
+    border-radius: .625rem;
 
     cursor: pointer;
     &:hover {

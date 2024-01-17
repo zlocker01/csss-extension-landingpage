@@ -1,15 +1,13 @@
 @import 'mixins/media';
 
 .main {
-    margin: 30px 10px;
+    margin: 1.875rem .625rem;
     display: grid;
-    grid-column: 4;
-    grid-row: 4;
-    gap: 10px;
+    gap: .9375rem;
 
     img {
-        border-radius: 10px;
-        box-shadow: 1px 12px 24px -9px rgba(0,0,0,0.62);
+        border-radius: .625rem;
+        box-shadow: .0625rem .75rem 1.25rem -0.5625rem rgba(0,0,0,0.62);
     }
 
     p {
@@ -29,6 +27,11 @@
         grid-row: 3 / 4;
     }
 
+    &__image--3 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
     &__p--1 {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
@@ -39,7 +42,16 @@
         grid-row: 3 / 4;
     }
 
+    &__p--3 {
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+    }
+
     @include media-smartphone{
+        img {
+            margin-top: 1.25rem;
+        }
+
         &__image--1 {
             grid-column: 1 / 4;
             grid-row: 1 ;
@@ -48,6 +60,11 @@
         &__image--2 {
             grid-column: 1 / 4;
             grid-row: 3 ;
+        }
+
+        &__image--3 {
+            grid-column: 1 / 4;
+            grid-row: 5 ;
         }
     
         &__p--1 {
@@ -58,6 +75,11 @@
         &__p--2 {
             grid-column: 1 / 4;
             grid-row:  4;
+        }
+
+        &__p--3 {
+            grid-column: 1 / 4;
+            grid-row:  6;
         }
     };
 }

@@ -1,10 +1,11 @@
 @import 'mixins/flex';
 @import 'mixins/button';
+@import 'mixins/media';
 @import 'variables';
 
 .header {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(207,100,154,1) 35%, rgba(0,212,255,1) 100%);
-    padding: 20px 0;
+    padding: 1.25rem 0;
     color: $secondary-color;
     @include flex-container();
     text-align: center;
@@ -17,12 +18,17 @@
     &__a {
         @include button();
         font-weight: bold;
+        box-shadow: .0625rem .75rem 1.25rem -0.5625rem rgba(0,0,0,0.62);
+
+        @include media-smartphone{
+            width: 70%;
+        };
     }
 
     &__svg {
         margin: 0 auto;
-        width: 20px;
-        height: 20px;
-        margin-top: 10px;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: .625rem;
     }
 }
