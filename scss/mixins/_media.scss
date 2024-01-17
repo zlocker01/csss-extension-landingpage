@@ -1,0 +1,16 @@
+/*
+/*
+Description: This mixin simplifies the creation of media rules by defining a specific breakpoint for small screens like smartphones. It allows for writing styles specific to different screen sizes, improving the responsiveness of the design.
+*/
+
+@mixin media-smartphone {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-desktop {
+@media screen and (min-width: 1024px) {
+@content;
+}
+}

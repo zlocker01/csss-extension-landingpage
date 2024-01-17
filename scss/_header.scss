@@ -1,0 +1,28 @@
+@import 'mixins/flex';
+@import 'mixins/button';
+@import 'variables';
+
+.header {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(207,100,154,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 20px 0;
+    color: $secondary-color;
+    @include flex-container();
+    text-align: center;
+
+    &__h1 {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    &__a {
+        @include button();
+        font-weight: bold;
+    }
+
+    &__svg {
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+    }
+}

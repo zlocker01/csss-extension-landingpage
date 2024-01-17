@@ -1,0 +1,23 @@
+@use '_reset';
+@import '_header';
+@import '_main';
+@import '_footer';
+@import 'variables';
+@import 'mixins/media';
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $font;
+
+    @include media-desktop{
+        h1 {
+            font-size: x-large; 
+        }
+
+        p {
+            font-size: large;
+        }
+    };
+}

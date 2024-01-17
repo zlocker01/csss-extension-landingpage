@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins/flex';
+@import 'mixins/media';
+
+.footer {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 20px;
+
+    h3 {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    &__contact {
+        @include flex-container(row, space-between, center, wrap, 10px);
+
+        @include media-smartphone {
+            flex-direction: column;
+        };
+    }
+}

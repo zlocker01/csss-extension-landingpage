@@ -1,0 +1,31 @@
+@import '../variables';
+
+/*
+Description: This mixin provides a convenient way to apply consistent styles to buttons. It accepts
+optional parameters for customizing the button's background color, text color, padding, and border.
+The :hover state darkens the background 
+color slightly, creating a subtle hover effect.
+Edit
+$primary-color
+$secondary-color~
+padding:
+50px
+20px
+border:
+2px
+solid
+$primary-color
+*/
+
+@mixin button($background: $primary-color, $color: $secondary-color, $width: 10px, $height: 10px, $borderWidth: 5px, $style: solid, $borderColor: $primary-color) {
+    background-color: $background;
+    color: $color;
+    padding: $width $height;
+    border: $borderWidth $style $borderColor;
+    border-radius: 10px;
+
+    cursor: pointer;
+    &:hover {
+        background-color: darken($background, 10%);
+    }
+}
